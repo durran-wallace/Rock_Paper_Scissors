@@ -11,7 +11,7 @@
   <body>
     <script >
         let playerSelection = "";
-        let computerSelection = computerPlay().toLowerCase();
+        let computerSelection = "";
         let playerScore = 0;
         let computerScore = 0;
 
@@ -29,10 +29,9 @@
         function playRound(playerSelection, computerSelection) {
            
             playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
+            computerSelection = computerPlay().toLowerCase();
 
-            if (playerSelection == "rock" && computerSelection == "rock" ||
-                playerSelection == "paper" && computerSelection == "paper" ||
-                playerSelection == "scissors" && computerSelection == "scissors") {
+            if (playerSelection == computerSelection) {
                     return "It's a tie!"
                 } else if (playerSelection == "rock" && computerSelection == "paper"){
                     computerScore ++;
