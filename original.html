@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title></title>
+  </head>
+
+  <body>
+    <script >
+        let playerSelection = "";
+        let computerSelection = "";
+        let playerScore = 0;
+        let computerScore = 0;
+
+        function computerPlay() {
+            let num = Math.floor(Math.random() * 3);
+            if (num < 1) {
+                return "Rock";
+            } else if (num < 2) {
+                return "Paper";
+            } else {
+                return "Scissors";
+            }
+        }
+
+        function playRound(playerSelection, computerSelection) {
+           
+            playerSelection = prompt("Rock, Paper, or Scissors?").toLowerCase();
+            computerSelection = computerPlay().toLowerCase();
+
+            if (playerSelection == computerSelection) {
+                    return "It's a tie!"
+                } else if (playerSelection == "rock" && computerSelection == "paper"){
+                    computerScore ++;
+                    return "Paper beats rock. You Lose!"
+                } else if (playerSelection == "paper" && computerSelection == "scissors"){
+                    computerScore ++;
+                    return "Scissors beat Paper. You Lose!"
+                } else if (playerSelection == "scissors" && computerSelection == "rock"){
+                    computerScore ++;
+                    return "Rock beats Scissors. You Lose!"
+                } else if (playerSelection == "paper" && computerSelection == "rock"){
+                    playerScore ++;
+                    return "Paper beats rock. You Win!"
+                } else if (playerSelection == "scissors" && computerSelection == "paper"){
+                    playerScore ++;
+                    return "Scissors beat Paper. You Win!"
+                } else if (playerSelection == "rock" && computerSelection == "scissors"){
+                    playerScore ++;
+                    return "Rock beats Scissors. You Win!"
+                } 
+        }
+        
+        function game() {
+            while (playerScore < 3 && computerScore < 3) {
+                console.log(playRound(playerSelection, computerSelection))
+            }
+            if (playerScore == 3) {
+                console.log("You win " + playerScore + " to " + computerScore + "!")
+            } else {
+                console.log("You lose " + computerScore + " to " + playerScore + "!")
+            }
+        }
+
+        game()
+        
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+* {
+    font-family: 'Arial';
+  }
+  
+  body {
+    background-color:lightslategray;
+  }
+  
+  p {
+    text-align: center;
+    height: fit-content;
+    min-height: 20px;
+  }
+  
+  button {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px;
+    font-size: x-large;
+  }
+  
+  img {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .main {
+    max-width: 700px;
+    min-width: 500px;
+    margin: 70px auto 0 auto;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .input {
+    width: 150px;
+    height:fit-content;
+  }
+  
+  .readout {
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    }
+  
+  .score {
+    width: 170px;
+    display: inline-block;
+    margin: auto;
+  }
+  
+  .players {
+    height: 50px;
+  }
+  
+  .tally {
+    height: 100px;
+  }
+  
+  .bluegray {
+    background-color: #fefefecc;
+  }
+  
+  .green {
+    background-color: rgb(175, 221, 175);
+  }
+  
+  .border {
+    border: 1px solid black;
+    box-shadow:5px 5px 5px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  .clicked {
+    background-color: black;
+    font: white;
+  }
+  
+  .score p {
+    padding-top: 10px;
+    padding-bottom:  10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px;
+  }
+  
+  .reset button {
+    height: 45px; 
+    display: block;
+  }
+  
+  .reset {
+    display: flex;
+    justify-content: center;
+  }
